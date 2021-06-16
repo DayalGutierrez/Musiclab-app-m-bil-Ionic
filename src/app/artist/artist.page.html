@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button [routerLink]="['']">
+        <ion-icon name="arrow-back-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title slot="end" ><ion-icon name="accessibility"></ion-icon>Artista</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Artista</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngFor="let artista of artistas">
+    <ion-img [src]="artista.foto"></ion-img>
+    <h3>{{artista.nombre}}</h3>
+    <p>{{artista.biografia}}</p>
+  </ion-card>
+</ion-content>

@@ -25,3 +25,10 @@
 #container a {
   text-decoration: none;
 }
+
+ion-avatar,
+ion-avatar > img{
+    --border-radius:2px;
+    height:7rem;
+    width:7rem;
+}

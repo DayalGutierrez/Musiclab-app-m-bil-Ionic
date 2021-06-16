@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button [routerLink]="['']">
+        <ion-icon name="arrow-back-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title slot="end" ><ion-icon name="chatbubbles"></ion-icon>Comentarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Comentarios</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngFor="let comment of comments">
+    <h1>{{comment.nombre}}</h1>
+    <h6>{{comment.fecha_realizado}}</h6>
+    <p>{{comment.texto}}</p>
+  </ion-card>
+  <ion-item>
+    <ion-input placeholder="Nuevo comentario"></ion-input>
+  </ion-item>
+</ion-content>

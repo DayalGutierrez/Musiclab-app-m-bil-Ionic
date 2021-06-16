@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-button [routerLink]="['']">
+        <ion-icon name="arrow-back-outline" ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title slot="end"><ion-icon name="headset-outline"></ion-icon>Tracks</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tracks</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card *ngFor="let track of tracks">
+    <h3>{{track.titulo}}</h3>
+    <p>{{track.duracion}}</p>
+  </ion-card>
+</ion-content>
